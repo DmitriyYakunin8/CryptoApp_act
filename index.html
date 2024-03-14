@@ -14,148 +14,151 @@
 </head>
 
 <body>
-    <div class="block">
-        <div class="block-row">
-            <div class="block-column header">
-                <div class="user">
-                    <img src="/img/default-user-icon.jpg" alt="user-icon" class="user-icon">
-                    <div class="user-name">user</div>
-                    <div class="user-id">.id</div>
-                    <div class="arrow-container"><img src="/img/arrow.png" alt="arrow" class="arrow"></div>
-                    <div class="user-menu">
-                        <div class="user-menu-chapter">My profile</div>
-                        <div class="user-menu-chapter">My balance</div>
-                        <div class="user-menu-chapter">Options</div>
+        <div class="block">
+            <div class="block-row">
+                <div class="block-column header">
+                    <div class="user">
+                        <img src="/img/default-user-icon.jpg" alt="user-icon" class="user-icon">
+                        <div class="user-name">user</div>
+                        <div class="user-id">.id</div>
+                        <div class="arrow-container"><img src="/img/arrow.png" alt="arrow" class="arrow"></div>
+                        <div class="user-menu">
+                            <a href="profile/profile.html" class="user-menu-chapter">My profile</a>
+                            <a href="/" class="user-menu-chapter">My balance</a>
+                            <a href="/" class="user-menu-chapter">Options</a>
+                        </div>
+                    </div>
+                    <button class="share-btn">Share</button>
+                </div>
+                <div class="block-column content">
+                    <div class="selected-currency">
+                        <div class="value">Total esimated value
+                            <div class="estimated-container">
+                                <div class="estimated-value"></div>
+                                <div class="estimated-value-type">USDT</div>
+                            </div>
+                        </div>
+                        <div class="rate"><img src="/img/rate-black.png" alt="rate" class="rate-btn"></div>
+                    </div>
+                    <div class="options">
+                        <div class="send option-elem"><img src="/img/send.png" alt="send" class="options-img">
+                            <div class="option-text">Send</div>
+                        </div>
+                        <div class="convert option-elem"><img src="/img/convert.png" alt="convert"
+                                class="convert-options-img options-img">
+                            <div class="option-text">Convert</div>
+                        </div>
+                        <div class="deposit option-elem"><img src="/img/deposit.png" alt="deposit" class="options-img">
+                            <div class="option-text">Deposit</div>
+                        </div>
+                    </div>
+    
+                    <div class="assets-text">My assets</div>
+    
+                    <div class="assets">
+                        <div class="all-assets">
+                            <div class="currency">
+                                <div class="currency-type">
+                                    <div class="logo-container BTC"><img class="logo-img" src="/img/bitcoin-logo.png"
+                                            alt="bitcoin-logo">
+                                    </div>
+                                    <div class="currency-info">
+                                        <div class="currency-name">Bitcoin</div>
+                                        <div class="currency-abb BTC">BTC</div>
+                                    </div>
+                                </div>
+                                <div class="currency-rate">
+                                    <div class="currency-cost BTC">$</div>
+                                    <div class="currency-rest">
+                                        <div class="currency-rest-value BTC"></div>
+                                        <img class="rate-index" src="/img/positive-rate.png" alt=">">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="currency">
+                                <div class="currency-type">
+                                    <div class="logo-container USDT"><img class="logo-img" src="/img/tether-logo.png"
+                                            alt="tether-logo">
+                                    </div>
+                                    <div class="currency-info">
+                                        <div class="currency-name">Tether</div>
+                                        <div class="currency-abb USDT">USDT</div>
+                                    </div>
+                                </div>
+                                <div class="currency-rate">
+                                    <div class="currency-cost USDT">$</div>
+                                    <div class="currency-rest">
+                                        <div class="currency-rest-value USDT"></div>
+                                        <img class="rate-index" src="/img/negative-rate.png" alt=">">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="currency">
+                                <div class="currency-type">
+                                    <div class="logo-container ETH"><img class="logo-img" src="/img/etherium-logo.png"
+                                            alt="etherium-logo">
+                                    </div>
+                                    <div class="currency-info">
+                                        <div class="currency-name">Etherium</div>
+                                        <div class="currency-abb ETH">ETH</div>
+                                    </div>
+                                </div>
+                                <div class="currency-rate">
+                                    <div class="currency-cost ETH">$</div>
+                                    <div class="currency-rest">
+                                        <div class="currency-rest-value ETH"></div>
+                                        <img class="rate-index" src="/img/negative-rate.png" alt=">">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="currency">
+                                <div class="currency-type">
+                                    <div class="logo-container MATIC"><img class="logo-img" src="/img/polygon-logo.png"
+                                            alt="polygon-logo">
+                                    </div>
+                                    <div class="currency-info">
+                                        <div class="currency-name">Polygon</div>
+                                        <div class="currency-abb MATIC">MATIC</div>
+                                    </div>
+                                </div>
+                                <div class="currency-rate">
+                                    <div class="currency-cost MATIC">$</div>
+                                    <div class="currency-rest">
+                                        <div class="currency-rest-value MATIC"></div>
+                                        <img class="rate-index" src="/img/negative-rate.png" alt=">">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <button class="share-btn">Share</button>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
             </div>
-            <div class="block-column content">
-                <div class="selected-currency">
-                    <div class="value">Total esimated value
-                        <div class="estimated-container">
-                            <div class="estimated-value"></div>
-                            <div class="estimated-value-type">USDT</div>
-                        </div>
-                    </div>
-                    <div class="rate"><img src="/img/rate-black.png" alt="rate" class="rate-btn"></div>
+            <div class="block-column footer">
+                <div class="user-wallet footer-btn-div"><img src="/img/user-wallet.png" alt="user-wallet"
+                        class="footer-btn">
+                    <div class="description-off">Wallet</div>
                 </div>
-                <div class="options">
-                    <div class="send option-elem"><img src="/img/send.png" alt="send" class="options-img">
-                        <div class="option-text">Send</div>
-                    </div>
-                    <div class="convert option-elem"><img src="/img/convert.png" alt="convert"
-                            class="convert-options-img options-img">
-                        <div class="option-text">Convert</div>
-                    </div>
-                    <div class="deposit option-elem"><img src="/img/deposit.png" alt="deposit" class="options-img">
-                        <div class="option-text">Deposit</div>
-                    </div>
+                <div class="rate footer-btn-div"><img src="/img/rate.png" alt="rate" class="footer-btn">
+                    <div class="description-off">Rate</div>
                 </div>
-
-                <div class="assets-text">My assets</div>
-
-                <div class="assets">
-                    <div class="all-assets">
-                        <div class="currency">
-                            <div class="currency-type">
-                                <div class="logo-container BTC"><img class="logo-img" src="/img/bitcoin-logo.png"
-                                        alt="bitcoin-logo">
-                                </div>
-                                <div class="currency-info">
-                                    <div class="currency-name">Bitcoin</div>
-                                    <div class="currency-abb BTC">BTC</div>
-                                </div>
-                            </div>
-                            <div class="currency-rate">
-                                <div class="currency-cost BTC">$</div>
-                                <div class="currency-rest">
-                                    <div class="currency-rest-value BTC"></div>
-                                    <img class="rate-index" src="/img/positive-rate.png" alt=">">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="currency">
-                            <div class="currency-type">
-                                <div class="logo-container USDT"><img class="logo-img" src="/img/tether-logo.png"
-                                        alt="tether-logo">
-                                </div>
-                                <div class="currency-info">
-                                    <div class="currency-name">Tether</div>
-                                    <div class="currency-abb USDT">USDT</div>
-                                </div>
-                            </div>
-                            <div class="currency-rate">
-                                <div class="currency-cost USDT">$</div>
-                                <div class="currency-rest">
-                                    <div class="currency-rest-value USDT"></div>
-                                    <img class="rate-index" src="/img/negative-rate.png" alt=">">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="currency">
-                            <div class="currency-type">
-                                <div class="logo-container ETH"><img class="logo-img" src="/img/etherium-logo.png"
-                                        alt="etherium-logo">
-                                </div>
-                                <div class="currency-info">
-                                    <div class="currency-name">Etherium</div>
-                                    <div class="currency-abb ETH">ETH</div>
-                                </div>
-                            </div>
-                            <div class="currency-rate">
-                                <div class="currency-cost ETH">$</div>
-                                <div class="currency-rest">
-                                    <div class="currency-rest-value ETH"></div>
-                                    <img class="rate-index" src="/img/negative-rate.png" alt=">">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="currency">
-                            <div class="currency-type">
-                                <div class="logo-container MATIC"><img class="logo-img" src="/img/polygon-logo.png"
-                                        alt="polygon-logo">
-                                </div>
-                                <div class="currency-info">
-                                    <div class="currency-name">Polygon</div>
-                                    <div class="currency-abb MATIC">MATIC</div>
-                                </div>
-                            </div>
-                            <div class="currency-rate">
-                                <div class="currency-cost MATIC">$</div>
-                                <div class="currency-rest">
-                                    <div class="currency-rest-value MATIC"></div>
-                                    <img class="rate-index" src="/img/negative-rate.png" alt=">">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="settings footer-btn-div"><img src="/img/settings.png" alt="settings" class="footer-btn">
+                    <div class="description-off">Settings</div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
-
         </div>
-        <div class="block-column footer">
-            <div class="user-wallet footer-btn-div"><img src="/img/user-wallet.png" alt="user-wallet"
-                    class="footer-btn">
-                <div class="description-off">Wallet</div>
-            </div>
-            <div class="rate footer-btn-div"><img src="/img/rate.png" alt="rate" class="footer-btn">
-                <div class="description-off">Rate</div>
-            </div>
-            <div class="settings footer-btn-div"><img src="/img/settings.png" alt="settings" class="footer-btn">
-                <div class="description-off">Settings</div>
-            </div>
-        </div>
-    </div>
+    
+    
+    
 
     <script src="/script.js"></script>
 </body>

@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', () => {
 // Плавное появление названия кнопок в футере
 let footer = document.querySelector(".footer");
 
@@ -152,3 +153,6 @@ function roundingChapter() {
 roundingChapter();
 
 console.log('loho');
+
+})
+
