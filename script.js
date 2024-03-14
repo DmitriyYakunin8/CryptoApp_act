@@ -125,16 +125,15 @@ let arrow = document.querySelector(".arrow-container");
 arrow.onclick = function () {
   let user = document.querySelector(".user");
   let menu = document.querySelector(".user-menu");
+  menu.classList.add("user-menu");
 
   if (menu.style.visibility == "hidden") {
-    menu.classList.add("user-menu");
+    menu.style.visibility = "visible";
     let userCoords = user.getBoundingClientRect();
-
     menu.style.left = userCoords.left + 1 + "px";
     menu.style.top = userCoords.bottom + 10 + "px";
-
-    menu.style.visibility = "visible";
-  } else {
+  } 
+  else {
     menu.classList.add("user-menu-onclick");
     menu.style.visibility = "hidden";
   }

@@ -92,6 +92,10 @@ body ::-webkit-scrollbar-thumb {
   background: white;
 }
 
+.loading-overlay {
+  visibility: hidden;
+}
+
 .block {
   text-align: center;
   background-color: #18191e;
@@ -418,7 +422,7 @@ body ::-webkit-scrollbar-thumb {
   flex-direction: column;
   justify-content: space-between;
   border-radius: 13px;
-  visibility: hidden;
+ 
 }
 
 .user-menu-onclick {

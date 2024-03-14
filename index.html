@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>Main Page</title>
     <link rel="stylesheet" type="text/css" href="/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,8 +15,14 @@
 </head>
 
 <body>
+    <div class="loading-overlay">
+        <div class="loading-text">Loading</div>
+    </div>
+
+
         <div class="block">
             <div class="block-row">
+                <!-- Header -->
                 <div class="block-column header">
                     <div class="user">
                         <img src="/img/default-user-icon.jpg" alt="user-icon" class="user-icon">
@@ -23,13 +30,15 @@
                         <div class="user-id">.id</div>
                         <div class="arrow-container"><img src="/img/arrow.png" alt="arrow" class="arrow"></div>
                         <div class="user-menu">
-                            <a href="profile/profile.html" class="user-menu-chapter">My profile</a>
+                            <a href="/profile.html" class="user-menu-chapter">My profile</a>
                             <a href="/" class="user-menu-chapter">My balance</a>
                             <a href="/" class="user-menu-chapter">Options</a>
                         </div>
                     </div>
                     <button class="share-btn">Share</button>
                 </div>
+
+                <!-- Content -->
                 <div class="block-column content">
                     <div class="selected-currency">
                         <div class="value">Total esimated value
@@ -132,27 +141,20 @@
                         </div>
                     </div>
                 </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-            </div>
-            <div class="block-column footer">
-                <div class="user-wallet footer-btn-div"><img src="/img/user-wallet.png" alt="user-wallet"
-                        class="footer-btn">
-                    <div class="description-off">Wallet</div>
-                </div>
-                <div class="rate footer-btn-div"><img src="/img/rate.png" alt="rate" class="footer-btn">
-                    <div class="description-off">Rate</div>
-                </div>
-                <div class="settings footer-btn-div"><img src="/img/settings.png" alt="settings" class="footer-btn">
-                    <div class="description-off">Settings</div>
+      
+                <!-- Footer -->
+            
+                <div class="block-column footer">
+                    <div class="user-wallet footer-btn-div"><img src="/img/user-wallet.png" alt="user-wallet"
+                            class="footer-btn">
+                        <div class="description-off">Wallet</div>
+                    </div>
+                    <div class="rate footer-btn-div"><img src="/img/rate.png" alt="rate" class="footer-btn">
+                        <div class="description-off">Rate</div>
+                    </div>
+                    <div class="settings footer-btn-div"><img src="/img/settings.png" alt="settings" class="footer-btn">
+                        <div class="description-off">Settings</div>
+                    </div>
                 </div>
             </div>
         </div>
