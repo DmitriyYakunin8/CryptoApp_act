@@ -11,46 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
     loadingOverlay.style.opacity = '0'
   }
 
-  const loadPage = (url) => {
-    showLoadingOverlay()
-
-    fetch(url)
-    .then(response => response.text())
-    .then(html => {
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, 'text/html');
-      const newContent = doc.querySelector('.content').innerHTML;
-      
-      contentDiv.classList.add('fade-out')
-
-      contentDiv.innerHTML = newContent
-      document.title = doc.title
-
-      setTimeout(() => {
-        contentDiv.classList.remove('fade-out')
-        history.pushState({}, '', url);
-        hideLoadingOverlay()
-      }, 500)
-    })
-  }
-
-  navLinks.forEach(el => {
-    el.addEventListener('click', (e) => {
-      e.preventDefault()
-
-      const url = e.currentTarget.getAttribute('href')
-      showLoadingOverlay()
-      loadPage(url)
-    })
-  })
-
-  loadPage(window.location.pathname);
-  window.addEventListener('popstate', () => {
-    loadPage(window.location.pathname)
-  })
-
-
-  // Плавное появление названия кнопок в футере
+  const loadScripts = (url) => {
+    if (url) {
+      // Плавное появление названия кнопок в футере
   let footer = document.querySelector(".footer");
 
   footer.addEventListener("mouseover", function (evt) {
@@ -208,6 +171,52 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   roundingChapter();
+    }
+  }
+
+  const loadPage = (url) => {
+    showLoadingOverlay()
+
+    fetch(url)
+    .then(response => response.text())
+    .then(html => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      const newContent = doc.querySelector('.content').innerHTML;
+      
+      contentDiv.classList.add('fade-out')
+
+      contentDiv.innerHTML = newContent
+      document.title = doc.title 
+
+      setTimeout(() => {
+        contentDiv.classList.remove('fade-out')
+        history.pushState({}, '', url);
+        hideLoadingOverlay()
+      }, 500)
+    })
+    .then(() => {
+      loadScripts(url)
+    })
+  }
+
+  navLinks.forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault()
+
+      const url = e.currentTarget.getAttribute('href')
+      showLoadingOverlay()
+      loadPage(url)
+    })
+  })
+
+  loadPage(window.location.pathname);
+  window.addEventListener('popstate', () => {
+    loadPage(window.location.pathname)
+  })
+
+
+  
 
 
 
