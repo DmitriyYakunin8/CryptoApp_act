@@ -1,3 +1,4 @@
+//Загрузка DOM-дерева
 document.addEventListener('DOMContentLoaded', () => {
   const contentDiv = document.querySelector('.content')
   const loadingOverlay = document.querySelector('.loading-overlay')
@@ -11,9 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
     loadingOverlay.style.opacity = '0'
   }
 
+  //Основной скрипт
   const loadScripts = (url) => {
     if (url) {
-      // Плавное появление названия кнопок в футере
+      
+  // Плавное появление названия кнопок в футере
   let footer = document.querySelector(".footer");
 
   footer.addEventListener("mouseover", function (evt) {
@@ -33,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  //плавное изменение цвета кнопок
+  //Плавное изменение цвета кнопок
   document.addEventListener("mouseover", function (evt) {
     if (evt.target.className.includes("share-btn")) {
       evt.target.classList.remove("btn-out");
@@ -48,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  //заполнение цветом currency
+  //Заполнение цветом currency
   let colors = {
     BTC: "fee7ab",
     USDT: "e1fedc",
@@ -72,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  //текущий курс валюты
+  //Текущий курс валюты
   function valueComparsion(values, obj) {
     for (let value of values) {
       for (let name of value.classList) {
@@ -104,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   valueComparsion(currencyCosts, rates);
 
-  //остаток валюты на счете
+  //Остаток валюты на счете
   let rests = {
     BTC: 1.322,
     USDT: 1.32,
@@ -116,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   valueComparsion(currencyRestValues, rests);
 
-  //расчет общей оценочной стоимости корзины
+  //Расчет общей оценочной стоимости корзины
   function totalCostCard() {
     let estimatedValue = document.querySelector(".estimated-value");
     let value = 0;
@@ -141,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   totalCostCard();
 
-  //выпадающее меню пользователя
+  //Выпадающее меню пользователя
   let arrow = document.querySelector(".arrow-container");
 
   arrow.onclick = function () {
@@ -174,6 +177,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+
+  //AJAX переход между страницами
   const loadPage = (url) => {
     showLoadingOverlay()
 
@@ -200,7 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
-  navLinks.forEach(el => {
+    navLinks.forEach(el => {
     el.addEventListener('click', (e) => {
       e.preventDefault()
 
@@ -210,6 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 
+  //Загрузка основного скрипта
   loadPage(window.location.pathname);
   window.addEventListener('popstate', () => {
     loadPage(window.location.pathname)
